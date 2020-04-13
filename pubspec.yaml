@@ -72,31 +72,31 @@ flutter:
     - assets/hotel/
     - assets/icon/
     - assets/flare/
-    - lib/src/pages/animations/
-    - lib/src/pages/animations/animation1/
-    - lib/src/pages/bike/
-    - lib/src/pages/blog/
-    - lib/src/pages/dialogs/
-    - lib/src/pages/dashboard/
-    - lib/src/pages/ecommerce/
-    - lib/src/pages/food/
-    - lib/src/pages/grocery/
-    - lib/src/pages/hotel/
-    - lib/src/pages/login/
-    - lib/src/pages/lists/
-    - lib/src/pages/misc/
-    - lib/src/pages/navigation/
-    - lib/src/pages/onboarding/
-    - lib/src/pages/profile/
-    - lib/src/pages/quiz_app/
-    - lib/src/pages/todo/
-    - lib/src/pages/settings/
-    - lib/src/pages/travel/
-    - lib/src/pages/invitation/
-    - lib/src/nic_asia_clone/
-    - lib/src/furniture_app/
+    - lib/src/designs/pages/animations/
+    - lib/src/designs/pages/animations/animation1/
+    - lib/src/designs/pages/bike/
+    - lib/src/designs/pages/blog/
+    - lib/src/designs/pages/dialogs/
+    - lib/src/designs/pages/dashboard/
+    - lib/src/designs/pages/ecommerce/
+    - lib/src/designs/pages/food/
+    - lib/src/designs/pages/grocery/
+    - lib/src/designs/pages/hotel/
+    - lib/src/designs/pages/login/
+    - lib/src/designs/pages/lists/
+    - lib/src/designs/pages/misc/
+    - lib/src/designs/pages/navigation/
+    - lib/src/designs/pages/onboarding/
+    - lib/src/designs/pages/profile/
+    - lib/src/designs/pages/quiz_app/
+    - lib/src/designs/pages/todo/
+    - lib/src/designs/pages/settings/
+    - lib/src/designs/pages/travel/
+    - lib/src/designs/pages/invitation/
+    - lib/src/designs/nic_asia_clone/
+    - lib/src/designs/furniture_app/
     - assets/nicasiaassets/
-    - lib/src/khalti_clone/
+    - lib/src/designs/khalti_clone/
   fonts:
     - family: icomoon
       fonts:

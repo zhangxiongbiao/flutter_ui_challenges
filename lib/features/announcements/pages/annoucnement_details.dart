@@ -5,7 +5,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_challenges/features/announcements/data/model/announcement.dart';
-import 'package:flutter_ui_challenges/src/widgets/network_image.dart';
+import 'package:flutter_ui_challenges/src/designs/widgets/network_image.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 

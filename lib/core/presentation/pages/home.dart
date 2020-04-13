@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage> {
   int _pageIndex;
   var _pageTabs = [
     WidgetsMenu(),
-    DesignMenu(),
+    DesignsMenu(),
     PluginsMenu(),
   ];
 

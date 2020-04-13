@@ -6,7 +6,7 @@ import 'package:flutter_ui_challenges/core/presentation/res/text_styles.dart';
 import 'package:flutter_ui_challenges/core/presentation/widgets/rounded_bordered_container.dart';
 import 'package:flutter_ui_challenges/features/announcements/data/model/announcement.dart';
 import 'package:flutter_ui_challenges/features/announcements/widgets/announcement_slider.dart';
-import 'package:flutter_ui_challenges/src/pages/invitation/inauth.dart';
+import 'package:flutter_ui_challenges/src/designs/pages/invitation/inauth.dart';
 
 class NewHomePage extends StatefulWidget {
   @override
