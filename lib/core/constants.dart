@@ -3,7 +3,7 @@ import 'package:flutter_ui_challenges/core/presentation/res/assets.dart';
 import 'data/models/developer.dart';
 
 const String githubRepo =
-    "https://github.com/lohanidamodar/flutter_ui_challenges";
+    "https://github.com/zhangxiongbiao/flutter_ui_challenges";
 const String youtubeChannel = "https://youtube.com/c/reactbits";
 
 const List<Developer> DEVELOPERS = [
