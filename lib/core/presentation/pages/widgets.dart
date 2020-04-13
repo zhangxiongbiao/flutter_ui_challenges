@@ -4,24 +4,22 @@
   */
 
 import 'dart:convert';
+
 import 'package:flutter/material.dart';
-import 'package:flutter_ui_challenges/core/data/favorite_firestore_service.dart';
 import 'package:flutter_ui_challenges/core/data/models/menu.dart';
 import 'package:flutter_ui_challenges/core/presentation/widgets/preview.dart';
-import 'package:flutter_ui_challenges/features/auth/data/model/user.dart';
-import 'package:flutter_ui_challenges/features/auth/data/model/user_repository.dart';
 import 'package:flutter_ui_challenges/src/pages/bike/bike_details.dart';
 import 'package:package_info/package_info.dart';
-import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
 import '../routes.dart';
 
-class MainMenu extends StatefulWidget {
+class WidgetsMenu extends StatefulWidget {
   @override
-  _MainMenuState createState() => _MainMenuState();
+  _WidgetsMenuState createState() => _WidgetsMenuState();
 }
 
-class _MainMenuState extends State<MainMenu> {
+class _WidgetsMenuState extends State<WidgetsMenu> {
   Map<String, bool> viewData = <String, bool>{};
   bool viewDataLoaded;
   List<SubMenuItem> unseen;
@@ -195,7 +193,7 @@ class _MainMenuState extends State<MainMenu> {
         trailing: Row(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            if (Provider.of<UserRepository>(context).user != null)
+/*            if (Provider.of<UserRepository>(context).user != null)
               IconButton(
                 icon: Icon(
                   isFavorited(context, item.title)
@@ -206,7 +204,7 @@ class _MainMenuState extends State<MainMenu> {
                       : Colors.black,
                 ),
                 onPressed: () => _addToFavorite(context, item.title),
-              ),
+              ),*/
             IconButton(
               icon: Icon(Icons.code),
               onPressed: () => _openPage(context, item, OpenMode.CODE),
@@ -223,22 +221,6 @@ class _MainMenuState extends State<MainMenu> {
         onTap: () => _openPage(context, item, OpenMode.PREVIEW),
       ),
     );
-  }
-
-  void _addToFavorite(BuildContext context, String key) {
-    User user = Provider.of<User>(context);
-    if (user != null) {
-      if (isFavorited(context, key)) {
-        FavoriteFirestoreService().removeFromFavorite(user.id, key);
-      } else {
-        FavoriteFirestoreService().addToFavorite(user.id, key);
-      }
-    }
-  }
-
-  bool isFavorited(BuildContext context, String key) {
-    return Provider.of<User>(context) != null &&
-        Provider.of<User>(context).favorites.contains(key);
   }
 
   void _openPage(BuildContext context, SubMenuItem item, OpenMode mode) {
