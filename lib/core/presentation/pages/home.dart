@@ -6,6 +6,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_challenges/core/presentation/pages/designs.dart';
 import 'package:flutter_ui_challenges/core/presentation/pages/plugins.dart';
+import 'package:flutter_ui_challenges/core/presentation/pages/states.dart';
 import 'package:flutter_ui_challenges/core/presentation/pages/widgets.dart';
 
 class HomePage extends StatefulWidget {
@@ -19,6 +20,7 @@ class _HomePageState extends State<HomePage> {
     WidgetsMenu(),
     DesignsMenu(),
     PluginsMenu(),
+    StatesMenu(),
   ];
 
   @override
@@ -41,6 +43,7 @@ class _HomePageState extends State<HomePage> {
         ),
         body: _pageTabs[_pageIndex],
         bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
           selectedItemColor: Theme.of(context).primaryColor,
           showUnselectedLabels: true,
           showSelectedLabels: true,
@@ -56,11 +59,15 @@ class _HomePageState extends State<HomePage> {
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.apps),
-              title: Text("design"),
+              title: Text("designs"),
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.android),
               title: Text("plugins"),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.store),
+              title: Text("states"),
             ),
           ],
         ),
