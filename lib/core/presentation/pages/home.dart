@@ -1,14 +1,12 @@
 /**
  * Author: Damodar Lohani
  * profile: https://github.com/lohanidamodar
-  */
+ */
 
 import 'package:flutter/material.dart';
-import 'package:flutter_ui_challenges/core/presentation/pages/favorites.dart';
-import 'package:flutter_ui_challenges/features/auth/data/model/user_repository.dart';
-import 'package:provider/provider.dart';
-
-import 'main_menu.dart';
+import 'package:flutter_ui_challenges/core/presentation/pages/designs.dart';
+import 'package:flutter_ui_challenges/core/presentation/pages/plugins.dart';
+import 'package:flutter_ui_challenges/core/presentation/pages/widgets.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -17,6 +15,12 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int _pageIndex;
+  var _pageTabs = [
+    WidgetsMenu(),
+    DesignMenu(),
+    PluginsMenu(),
+  ];
+
   @override
   void initState() {
     super.initState();
@@ -35,33 +39,31 @@ class _HomePageState extends State<HomePage> {
         appBar: AppBar(
           title: Text("UI Challenges"),
         ),
-        body: Provider.of<UserRepository>(context).user != null
-            ? _pageIndex == 0 ? MainMenu() : FavoritesTab()
-            : MainMenu(),
-        bottomNavigationBar: Provider.of<UserRepository>(context).user == null
-            ? null
-            : BottomNavigationBar(
-                selectedItemColor: Theme.of(context).primaryColor,
-                showUnselectedLabels: false,
-                showSelectedLabels: false,
-                backgroundColor: Colors.grey.shade300,
-                currentIndex: _pageIndex,
-                onTap: (index) => setState(() {
-                  _pageIndex = index;
-                }),
-                items: [
-                  BottomNavigationBarItem(
-                    title: Text(""),
-                    icon: Icon(Icons.home),
-                  ),
-                  BottomNavigationBarItem(
-                    title: Text(""),
-                    icon: Icon(_pageIndex == 1
-                        ? Icons.favorite
-                        : Icons.favorite_border),
-                  ),
-                ],
-              ),
+        body: _pageTabs[_pageIndex],
+        bottomNavigationBar: BottomNavigationBar(
+          selectedItemColor: Theme.of(context).primaryColor,
+          showUnselectedLabels: true,
+          showSelectedLabels: true,
+          backgroundColor: Colors.grey.shade300,
+          currentIndex: _pageIndex,
+          onTap: (index) => setState(() {
+            _pageIndex = index;
+          }),
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.widgets),
+              title: Text("widgets"),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.apps),
+              title: Text("design"),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.android),
+              title: Text("plugins"),
+            ),
+          ],
+        ),
       ),
     );
   }
