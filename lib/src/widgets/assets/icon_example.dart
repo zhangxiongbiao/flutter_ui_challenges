@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class IconExample extends StatelessWidget {
-  static final String path = "lib/src/pages/widgets/assets/icon_example.dart";
+  static final String path = "lib/src/widgets/assets/icon_example.dart";
 
   const IconExample({Key key}) : super(key: key);
 
