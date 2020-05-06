@@ -1,12 +1,22 @@
 import 'package:flutter_ui_challenges/core/data/models/menu.dart';
 import 'package:flutter_ui_challenges/src/widgets/assets/icon_example.dart';
 import 'package:flutter_ui_challenges/src/widgets/assets/image_example.dart';
+import 'package:flutter_ui_challenges/src/widgets/buttons/raised_button.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 final List<dynamic> pages = [
   MenuItem(title: "资源、图标、图片", icon: FontAwesomeIcons.image, items: [
     SubMenuItem("Icon", IconExample(), path: IconExample.path),
     SubMenuItem("Image", ImageExample(), path: ImageExample.path),
+  ]),
+  MenuItem(title: "按钮", icon: FontAwesomeIcons.image, items: [
+    SubMenuItem("RaisedButton", RaisedButtonExample(), path: RaisedButtonExample.path),
+    SubMenuItem("FlatButton", ImageExample(), path: ImageExample.path),
+    SubMenuItem("IconButton", ImageExample(), path: ImageExample.path),
+    SubMenuItem("FloatingActionButton", ImageExample(), path: ImageExample.path),
+    SubMenuItem("DropdownButton", ImageExample(), path: ImageExample.path),
+    SubMenuItem("OutlineButton", ImageExample(), path: ImageExample.path),
+    SubMenuItem("PopupMenuButton", ImageExample(), path: ImageExample.path),
   ]),
 ];
 
