@@ -101,6 +101,7 @@ flutter:
     - assets/nicasiaassets/
     - lib/src/designs/khalti_clone/
     - lib/src/widgets/assets/
+    - lib/src/widgets/buttons/
   fonts:
     - family: icomoon
       fonts:
