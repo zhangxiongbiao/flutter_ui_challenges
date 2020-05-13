@@ -1,6 +1,7 @@
 import 'package:flutter_ui_challenges/core/data/models/menu.dart';
 import 'package:flutter_ui_challenges/src/widgets/assets/icon_example.dart';
 import 'package:flutter_ui_challenges/src/widgets/assets/image_example.dart';
+import 'package:flutter_ui_challenges/src/widgets/buttons/dropdown_button.dart';
 import 'package:flutter_ui_challenges/src/widgets/buttons/flat_button.dart';
 import 'package:flutter_ui_challenges/src/widgets/buttons/floating_action_button.dart';
 import 'package:flutter_ui_challenges/src/widgets/buttons/icon_button.dart';
@@ -24,7 +25,7 @@ final List<dynamic> pages = [
           path: IconButtonExample.path),
       SubMenuItem("FloatingActionButton", FloatingActionButtonExample(),
           path: FloatingActionButtonExample.path),
-      SubMenuItem("DropdownButton", ImageExample(), path: ImageExample.path),
+      SubMenuItem("DropdownButton", DropdownButtonExample(), path: DropdownButtonExample.path),
       SubMenuItem("OutlineButton", ImageExample(), path: ImageExample.path),
       SubMenuItem("PopupMenuButton", ImageExample(), path: ImageExample.path),
     ],
