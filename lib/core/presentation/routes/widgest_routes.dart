@@ -6,6 +6,7 @@ import 'package:flutter_ui_challenges/src/widgets/buttons/flat_button.dart';
 import 'package:flutter_ui_challenges/src/widgets/buttons/floating_action_button.dart';
 import 'package:flutter_ui_challenges/src/widgets/buttons/icon_button.dart';
 import 'package:flutter_ui_challenges/src/widgets/buttons/raised_button.dart';
+import 'package:flutter_ui_challenges/src/widgets/buttons/toggle_buttons.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 final List<dynamic> pages = [
@@ -25,6 +26,8 @@ final List<dynamic> pages = [
           path: IconButtonExample.path),
       SubMenuItem("FloatingActionButton", FloatingActionButtonExample(),
           path: FloatingActionButtonExample.path),
+      SubMenuItem("ToggleButtons", ToggleButtonsExample(),
+          path: ToggleButtonsExample.path),
       SubMenuItem("DropdownButton", DropdownButtonExample(), path: DropdownButtonExample.path),
       SubMenuItem("OutlineButton", ImageExample(), path: ImageExample.path),
       SubMenuItem("PopupMenuButton", ImageExample(), path: ImageExample.path),
