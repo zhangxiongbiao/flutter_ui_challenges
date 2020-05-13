@@ -85,6 +85,7 @@ class _FloatingActionButtonExampleState
             child: Icon(Icons.alarm),
             backgroundColor: Colors.green,
             onPressed: (){},
+            heroTag: "one",
           ),
           SizedBox(height: 10,),
           FloatingActionButton.extended(
@@ -95,6 +96,7 @@ class _FloatingActionButtonExampleState
             label: Text('Approve'),
             icon: Icon(Icons.thumb_up),
             backgroundColor: Colors.pink,
+            heroTag: "two",
           ),
         ],
       ),
@@ -105,6 +107,7 @@ class _FloatingActionButtonExampleState
               },
               child: Icon(Icons.add),
               tooltip: '创建',
+              heroTag: "three",
             )
           : null,
       floatingActionButtonLocation: _fabLocation,
