@@ -21,8 +21,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter UIs',
       theme: ThemeData(
-        scaffoldBackgroundColor: Colors.grey.shade300,
-        primarySwatch: Colors.red,
+        scaffoldBackgroundColor: Colors.white,
+        primarySwatch: Colors.purple,
         accentColor: Colors.indigo,
       ),
       home: HomePage(),
